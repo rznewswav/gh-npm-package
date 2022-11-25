@@ -1,0 +1,24 @@
+{
+  "exclude": [".*\\.spec|test\\.(j|t)s$", "mocks", "types"],
+  "jsc": {
+    "baseUrl": ".",
+    "paths": {
+      "src/*": ["src/*"]
+    },
+    "parser": {
+      "syntax": "typescript",
+      "tsx": false,
+      "decorators": true,
+      "dynamicImport": true
+    },
+    "target": "es2020",
+    "externalHelpers": true,
+    "transform": {
+      "legacyDecorator": false,
+      "decoratorMetadata": true
+    }
+  },
+  "module": {
+    "type": "commonjs"
+  }
+}
