@@ -2,7 +2,6 @@
   "name": "@rznewswav/gh-npm-package",
   "version": "1.0.1-fix.1",
   "description": "",
-  "private": true,
   "main": "index.js",
   "scripts": {
     "build": "tsc && swc src -s -d ./dist",
