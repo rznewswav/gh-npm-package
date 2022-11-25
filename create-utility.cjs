@@ -55,18 +55,18 @@ fs.mkdirSync(targetDirectory, {
     recursive: true,
 });
 
-const moduleToken = 'moduleToken';
+const moduleCamelToken = 'moduleCamelToken';
 const moduleKebabToken = 'module-kebab-token';
 
 console.info(`:: Transforming module file: ${filePath}`);
 const moduleContent = moduleTemplate
-    .replaceAll('moduleToken', camelCaseToken)
+    .replaceAll(moduleCamelToken, camelCaseToken)
     .replaceAll(moduleKebabToken, kebabToken);
 fs.writeFileSync(filePath, moduleContent);
 
 console.info(`:: Transforming spec file: ${specFilePath}`);
 const moduleSpecContent = moduleSpecTemplate
-    .replaceAll('moduleToken', camelCaseToken)
+    .replaceAll(moduleCamelToken, camelCaseToken)
     .replaceAll(moduleKebabToken, kebabToken);
 fs.writeFileSync(specFilePath, moduleSpecContent);
 
