@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+npm_user=$(npm whoami --registry=https://npm.pkg.github.com 2> /dev/null)
+if [ -z "$npm_user" ]
+then
+  echo "Login using npm login --scope=@rznewswav --registry=https://npm.pkg.github.com"
+  echo "When prompted with password, use your github token."
+elif [ -z "$NODE_AUTH_TOKEN" ]
+then
+  echo "Set your environment variable NODE_AUTH_TOKEN with your github token"
+else
+  npm ci
+  npm run build
+  cp package*.json dist
+  cd dist
+  npm publish --scope=@rznewswav --registry=https://npm.pkg.github.com
+fi

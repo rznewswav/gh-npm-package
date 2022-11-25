@@ -1,5 +1,4 @@
 {
-  "exclude": [".*\\.spec|test\\.(j|t)s$", "mocks", "types"],
   "jsc": {
     "baseUrl": ".",
     "paths": {

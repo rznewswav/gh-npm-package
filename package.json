@@ -1,10 +1,12 @@
 {
   "name": "@rznewswav/gh-npm-package",
-  "version": "1.0.1-fix.1",
+  "version": "1.0.1-fix.2-8",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc && swc src -s -d ./dist",
+    "build": "tsc",
+    "create": "node create-utility.cjs",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "test": "APP_ENV=testing jest",
     "test:cov": "jest --coverage"
   },
@@ -46,6 +48,7 @@
     "@swc/helpers": "^0.4.14",
     "@swc/jest": "^0.2.23",
     "@types/jest": "^29.2.3",
+    "@typescript-eslint/eslint-plugin": "^5.44.0",
     "eslint": "^8.28.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
