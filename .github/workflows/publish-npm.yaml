@@ -19,6 +19,7 @@ jobs:
           scope: '@rznewswav'
       - run: npm pkg set version="${{github.ref_name}}-release"
       - run: npm ci
+      - run: npm run build
       - run: cp package*.json dist
       - run: cd dist
       - run: npm publish
