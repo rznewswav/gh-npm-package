@@ -61,5 +61,10 @@
   },
   "optionalDependencies": {
     "reflect-metadata": "^0.1.13"
+  },
+  "exports": {
+    "./word-to-pascal": "./word-to-pascal/word-to-pascal.js",
+    "./fetch-json": "./fetch-json/fetch-json.js",
+    "./word-finder": "./word-finder/word-finder.js"
   }
 }
